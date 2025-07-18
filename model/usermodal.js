@@ -1,0 +1,65 @@
+const mongoose = require('mongoose')
+
+const userSchema = new mongoose.Schema({
+    firstname:{
+        type:String,
+        required:false
+    },
+    lastname:{
+        type:String,
+    },
+    middlename:{
+        type:String,
+    },
+    username:{
+        type:String,
+        required:true,
+    },
+    email:{
+        type:String,
+        required:true,
+        unique:true,
+    },
+    password:{
+        type:String,
+        required:true,
+    },
+    eventlocation:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'locations'
+    },
+    country:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'country'
+    },
+    state:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'state'
+    },
+    eventdate:{
+        type:Date,
+    },
+    phonenumber:{
+        type:Number,
+    },
+    businessname:{
+        type:String,
+        required:false,
+    },
+    businessgroup:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'businessgroup',
+        required:false,
+
+    },
+    businesscategory:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'businesscategory',
+        required:false,
+    },
+    usertype:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"usertype",
+    }
+},{timestamps:true})
+module.exports = mongoose.model('user',userSchema)//creation of user model
