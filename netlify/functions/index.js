@@ -41,7 +41,7 @@ routers.use('/Area',areaRoutes)
 // })
 
 app.get('/index', (req, res) => {
-  console.log(error,'dsfjbbdf')
+  console.log('index route')
   res.send('success');
 });
 
