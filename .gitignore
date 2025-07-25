@@ -13,3 +13,5 @@ pnpm-debug.log*
 lerna-debug.log*
 
 *.env
+# Local Netlify folder
+.netlify

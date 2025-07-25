@@ -37,6 +37,7 @@ const readarea = async(req,res) =>{
         return res.status(200).json({ status: true, data: { message: "All Place ", data: dbarea } })
 
     }catch(error){
+        console.log(error,'idf')
     return res.status(500).json({ status: false, data: { message: 'Internal server error', data: error } })
     }
 }
