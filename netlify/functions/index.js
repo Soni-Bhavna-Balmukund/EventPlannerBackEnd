@@ -1,7 +1,7 @@
 const express = require('express')
 const cors =  require('cors')
 // const userroutes = require('../../router/userroutes')
-// const conn = require('../../utility/connectDb')
+const conn = require('../../utility/connectDb')
 // const businessGroupRoutes = require('../../router/businessGroupRoutes')
 // const businessCategoryRoutes = require('../../router/businessCategoryRoutes')
 // const userTypeRoutes = require('../../router/userTypeRoutes')
@@ -39,8 +39,8 @@ routers.use('/Area',areaRoutes)
 // app.get('/netlify/functions/index/',(req,res)=>{
 //     res.send('success')
 // })
-
-app.get('/index', (req, res) => {
+conn()
+routers.get('/index', (req, res) => {
   console.log('index route')
   res.send('success');
 });
