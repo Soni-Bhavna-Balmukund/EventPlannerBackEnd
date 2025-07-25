@@ -12,7 +12,7 @@ const areaRoutes = require('../../router/areaRoute')
 const addPlaceRoutes = require('../../router/eventPlaceRoute')
 
 const serverless = require('serverless-http')
-const router = require('../../router/userroutes')
+// const router = require('../../router/userroutes')
 const routers = express.Router();
 const app = express()
 app.use(cors())
